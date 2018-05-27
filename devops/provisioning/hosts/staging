@@ -1,2 +1,2 @@
 [staging]
-<%= stagingIpAddress %>  ansible_ssh_user=ubuntu
+ec2-35-180-43-49.eu-west-3.compute.amazonaws.com ansible_ssh_user=ubuntu

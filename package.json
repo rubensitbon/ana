@@ -2,6 +2,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:staging": "REACT_APP_ENV='staging' react-scripts build",
+    "deploy:staging":
+      "npm run build:staging && scp -r build/* www-data@35.180.16.191:/var/www/myfundmatch/current",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "analyze": "source-map-explorer build/static/js/main.*",
