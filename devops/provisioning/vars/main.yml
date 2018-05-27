@@ -1,0 +1,6 @@
+---
+#PUT here your main variable
+project_name: Ana
+port: 80
+apt_specific_packages:
+  - git

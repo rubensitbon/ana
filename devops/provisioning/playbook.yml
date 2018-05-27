@@ -1,0 +1,21 @@
+---
+
+- hosts: all
+  gather_facts: False
+
+  tasks:
+  - name: install python 2
+    raw: sudo bash -c "test -e /usr/bin/python || (apt -qqy update && apt install -qy python-minimal)"
+
+- name: Provisioning <%= appName %>
+  hosts: all
+  become: true
+  vars_files:
+    - vars/main.yml
+    - vars/ubuntu-xdebug.yml
+
+  roles:
+    - any-nodejs
+    - create-www-data-user
+    - nginx
+    - ubuntu-apt
