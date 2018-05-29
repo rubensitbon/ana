@@ -3,8 +3,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "build:staging": "REACT_APP_ENV='staging' react-scripts build",
-    "deploy:staging":
-      "npm run build:staging && scp -r build/* www-data@ec2-35-180-43-49.eu-west-3.compute.amazonaws.com:/var/www/ana/current",
+    "deploy:staging": "npm run build:staging && scp -r build/* www-data@ec2-35-180-43-49.eu-west-3.compute.amazonaws.com:/var/www/ana/current",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "analyze": "source-map-explorer build/static/js/main.*",
@@ -39,6 +38,9 @@
     }
   },
   "dependencies": {
+    "@material-ui/core": "^1.1.0",
+    "@material-ui/icons": "^1.1.0",
+    "google-map-react": "^1.0.3",
     "plop": "^1.9.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
