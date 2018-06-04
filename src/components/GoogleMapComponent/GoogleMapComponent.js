@@ -1,7 +1,7 @@
 // @flow
 import React, { PureComponent } from 'react';
 import GoogleMapReact from 'google-map-react';
-import { LocalPizza } from '@material-ui/icons';
+import PictureDialog from 'components/PictureDialog';
 
 import Container from './GoogleMapComponent.style';
 
@@ -9,7 +9,7 @@ type Props = {};
 
 const CustomMarker = () => (
   <div>
-    <LocalPizza />
+    <PictureDialog />
   </div>
 );
 
